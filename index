@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Matemáticas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Cuaderno de Ejercicios</h1>
+            <p class="subtitle">Seleccione una actividad</p>
+        </header>
+
+        <nav class="menu-grid">
+            <a href="ejercicios/suma_facil.html" class="card">
+                <div class="symbol">+</div>
+                <h3>Sumas Básicas</h3>
+                <p>Nivel 1</p>
+            </a>
+            
+            <a href="#" class="card disabled">
+                <div class="symbol">−</div>
+                <h3>Restas</h3>
+                <p>Próximamente</p>
+            </a>
+            
+            <a href="#" class="card disabled">
+                <div class="symbol">×</div>
+                <h3>Multiplicación</h3>
+                <p>Próximamente</p>
+            </a>
+        </nav>
+
+        <footer>
+            <p>Repositorio Educativo - Versión 1.0</p>
+        </footer>
+    </div>
+
+</body>
+</html>
