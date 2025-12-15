@@ -1,0 +1,159 @@
+/* --- Variables y Reset --- */
+:root {
+    --paper-color: #fdfbf7;
+    --ink-color: #2c3e50;
+    --accent-color: #8e44ad; /* Un morado académico */
+    --border-color: #dcdde1;
+    --success-color: #27ae60;
+    --error-color: #c0392b;
+    --font-academic: 'Georgia', 'Times New Roman', serif;
+    --font-ui: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1;
+    color: var(--ink-color);
+    font-family: var(--font-academic);
+}
+
+/* --- Contenedor Principal (Hoja de papel) --- */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: var(--paper-color);
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    min-height: 90vh;
+}
+
+/* --- Tipografía Académica --- */
+h1 {
+    text-align: center;
+    border-bottom: 2px solid var(--ink-color);
+    padding-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+/* --- Grid del Menú --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--ink-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.card:hover:not(.disabled) {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: var(--accent-color);
+}
+
+.symbol {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* --- Zona de Ejercicios (Interfaz del Juego) --- */
+#problem-area {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.operation {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-family: var(--font-ui); /* Números claros */
+}
+
+input[type="number"] {
+    font-size: 2rem;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    border: 2px solid var(--ink-color);
+    border-radius: 8px;
+    outline: none;
+}
+
+button.btn-check {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background-color: var(--ink-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--font-ui);
+}
+
+button.btn-check:active {
+    transform: scale(0.98);
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-height: 1.5em;
+}
+
+.correct { color: var(--success-color); }
+.incorrect { color: var(--error-color); }
+
+/* --- Navegación --- */
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* --- Media Queries (Para Móvil) --- */
+@media (max-width: 600px) {
+    .container {
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+    
+    h1 { font-size: 1.8rem; }
+    
+    .operation { font-size: 3rem; }
+    
+    input[type="number"] { width: 100%; max-width: 200px; }
+    
+    button.btn-check {
+        width: 100%;
+        padding: 20px; /* Botón más grande para dedo */
+    }
+}
